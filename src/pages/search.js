@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { View, Text, Button, StyleSheet } from "react-native";
 import { Image } from 'react-native-elements';
 import { FontAwesome } from '@expo/vector-icons';
@@ -9,10 +9,13 @@ export default function Search({ route, navigation }) {
     function navigateToChat() {
         navigation.navigate('Chat',{
             nome: nome,
-            tema: tema
+            tema: tema,
+            id: id,
         })
     }
+    const [id, setId] = useState(1);
 
+    
     const { nome } = "Fulano";
     const { idade } = route.params;
     const { sexo } = route.params;
@@ -25,7 +28,7 @@ export default function Search({ route, navigation }) {
                 <Text style={styles.settingsText}>Sexo: {JSON.stringify(sexo)} / Idade: 18 - {JSON.stringify(idade)} / Localidade: ???</Text>
             </View>
 
-            <Text style={styles.name}>Fulano, 20</Text>
+            <Text style={styles.name}> Fulano{JSON.stringify(id)} , 20</Text>
             <Image
                 source={require("../images/user-image.png")}
                 style={styles.image}
@@ -34,7 +37,7 @@ export default function Search({ route, navigation }) {
                 <Text style={styles.description}> Ut dolor aliquip consequat occaecat aute pariatur laboris nulla incididunt nostrud fugiat proident. Aliqua nostrud ad irure ea Lorem id. Fugiat occaecat ad esse adipisicing enim sunt nostrud ad et tempor veniam.</Text>
             </View>
             <View style={{ flexDirection: "row", justifyContent: "space-around", width: 300 }}>
-                <FontAwesome name="times-circle" size={60} onPress={navigateToChat} />
+                <FontAwesome name="times-circle" size={60} onPress={()=>setId(id+1)} />
                 <FontAwesome name="check-circle" size={60} onPress={navigateToChat} />
             </View>
 

@@ -10,19 +10,20 @@ export default function Chat({ route }) {
 
     const { tema } = route.params;
     const { nome } = route.params;
+    const { id } = route.params;
 
     return (
         <View style={styles.container}>
             <View style={styles.settings}>
                 <Text style={styles.settingsText}>Tema: {JSON.stringify(tema)} </Text>
-                <Text style={styles.settingsText}>{JSON.stringify(nome)}</Text>
+        
             </View>
             <View style={{ flexDirection: "row", justifyContent: "center", width: 300 }}>
                 <Image
                     source={require("../images/user-image.png")}
                     style={styles.image}
                 />
-                <Text style={styles.name}>Fulano, 20</Text>
+                <Text style={styles.name}> Fulano{JSON.stringify(id)}, 20</Text>
             </View>
 
 

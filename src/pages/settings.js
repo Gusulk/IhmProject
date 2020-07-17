@@ -26,7 +26,7 @@ export default function Settings({ route ,navigation }) {
             </View>
             <View style={styles.containerView}>
                 <View style={styles.divider}>
-                    <Text style={{ textAlign: "center", fontWeight: 'bold', fontSize: 18, color: '#737373' }}> Sexo </Text>
+                    <Text style={{ textAlign: "center", fontWeight: 'bold', fontSize: 18, color: '#737373' }}> Procurar por </Text>
                     <View style={{
                         flexDirection: "row",
                     }}>
@@ -47,7 +47,7 @@ export default function Settings({ route ,navigation }) {
                                 flex: 1
                             }}
                             textStyle={{
-                                fontSize: 16,
+                                fontSize: 12,
                                 color: "#737373",
 
                             }}
@@ -69,7 +69,7 @@ export default function Settings({ route ,navigation }) {
                                 flex: 1
                             }}
                             textStyle={{
-                                fontSize: 16,
+                                fontSize: 12,
                                 color: "#737373",
 
                             }}
@@ -91,7 +91,7 @@ export default function Settings({ route ,navigation }) {
                                 flex: 1
                             }}
                             textStyle={{
-                                fontSize: 16,
+                                fontSize: 12,
                                 color: "#737373",
 
                             }}
@@ -186,14 +186,14 @@ const styles = StyleSheet.create({
     containerView: {
         flex: 1,
         margin: 20,
-        width: 400,
+        width: 350,
         justifyContent: "center",
         alignItems: "center"
 
     },
 
     divider: {
-        width: 400,
+        width: 350,
         backgroundColor: "#f2f2f2",
         borderColor: "#D9D9D9",
         borderRadius: 10,

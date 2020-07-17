@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         marginVertical: 10,
         height: 50,
-        width: 400
+        width: 250
 
     },
 
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
     containerView: {
         flex: 1,
         margin: 20,
-        width: 400,
+        width: 250,
         justifyContent: "center",
 
     },
